@@ -6,29 +6,43 @@
     <title>GoldSocho</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Resets default margins and makes the body fill the entire viewport height */
         body {
             margin: 0;
             padding: 0;
             min-height: 100vh;
             display: flex;
-            justify-content: center; /* Centers horizontally */
-            align-items: center;     /* Centers vertically */
-            background-color: #fcfcfc; /* Optional: adds a clean background color */
+            flex-direction: column; /* Changed to column to stack elements vertically */
+            justify-content: center;
+            align-items: center;
+            background-color: #fcfcfc;
+            font-family: 'Outfit', sans-serif;
         }
-
-        /* Container for the link and image */
+        
         .image-container {
             display: flex;
+            flex-direction: column; /* Arranges the text and image in a column */
             justify-content: center;
             align-items: center;
             width: 50%;
             max-width: 50%;
-            padding: 20px; /* Optional: adds a little breathing room on smaller screens */
+            padding: 20px;
             box-sizing: border-box;
         }
 
-        /* Makes the image responsive so it doesn't break on mobile screens */
+        /* Styling for the new text link above the image */
+        .image-text {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #333;
+            text-decoration: none;
+            margin-bottom: 15px; /* Adjust this value to change the gap size */
+            transition: color 0.2s ease;
+        }
+
+        .image-text:hover {
+            color: #b89438; /* Changes color when hovered */
+        }
+
         .image-container img {
             max-width: 80%;
             height: auto;
@@ -36,11 +50,14 @@
         }
     </style>
 </head>
-    <div>
-       <h3 style="color: red;">click the Image to redirect <span style="color: green;">BabiyaLifestyle</span></h3>
-<body> 
-    </div>
+<body>
+
+    <h3 style="color: red; text-align: center;">click the Image to redirect <span style="color: green;">BabiyaLifestyle</span></h3>
+
     <div class="image-container">
+        <!-- Text link placed directly above the image -->
+        <a href="https://babiyalifestyle.com" class="image-text">Shop the Babiya Lifestyle Collection</a>
+        
         <a href="https://babiyalifestyle.com">
             <img src="IMG-20260909-WA0001.jpg" alt="Description of the image">
         </a>
@@ -48,4 +65,3 @@
 
 </body>
 </html>
-
