@@ -11,36 +11,39 @@
             padding: 0;
             min-height: 100vh;
             display: flex;
-            flex-direction: column; /* Changed to column to stack elements vertically */
             justify-content: center;
             align-items: center;
             background-color: #fcfcfc;
             font-family: 'Outfit', sans-serif;
         }
-        
-        .image-container {
+
+        .container {
             display: flex;
-            flex-direction: column; /* Arranges the text and image in a column */
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            width: 50%;
-            max-width: 50%;
+            justify-content: center;
+            text-align: center;
             padding: 20px;
             box-sizing: border-box;
         }
 
-        /* Styling for the new text link above the image */
         .image-text {
             font-size: 1.25rem;
             font-weight: 500;
-            color: #333;
+            color: red;
             text-decoration: none;
-            margin-bottom: 15px; /* Adjust this value to change the gap size */
-            transition: color 0.2s ease;
+            margin-bottom: 15px;
         }
 
-        .image-text:hover {
-            color: #b89438; /* Changes color when hovered */
+        .image-text span {
+            color: green;
+        }
+
+        .image-container {
+            width: 100%;
+            max-width: 500px; /* Limits maximum width of the image wrapper */
+            display: flex;
+            justify-content: center;
         }
 
         .image-container img {
@@ -52,12 +55,13 @@
 </head>
 <body>
 
-    <h3 style="color: red; text-align: center;">click the Image to redirect <span style="color: green;">BabiyaLifestyle</span></h3>
-
-    <div class="image-container">
-        <a href="https://babiyalifestyle.com">
-            <img src="IMG-20260909-WA0001.jpg" alt="Description of the image">
-        </a>
+    <div class="container">
+        <h3 class="image-text">click the Image to redirect <span>BabiyaLifestyle</span></h3>
+        <div class="image-container">
+            <a href="https://babiyalifestyle.com">
+                <img src="IMG-20260909-WA0001.jpg" alt="Description of the image">
+            </a>
+        </div>
     </div>
 
 </body>
